@@ -14,19 +14,19 @@ class Solution {
         ListNode tempp=dummy;
         int carry=0;
         while(l1!=null || l2!=null || carry==1){
-            int sum=0;
+            int summ=0;
             if(l1!=null){
-                sum=sum+l1.val;
+                summ=summ+l1.val;
                 l1=l1.next;
             }
 
             if(l2!=null){
-                sum=sum+l2.val;
+                summ=summ+l2.val;
                 l2=l2.next;
             }
-            sum+=carry;
-            ListNode newNode= new ListNode(sum%10);
-            carry=sum/10;
+            summ+=carry;
+            ListNode newNode= new ListNode(summ%10);
+            carry=summ/10;
             tempp.next=newNode;
             tempp=tempp.next;
         }
